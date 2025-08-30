@@ -1,4 +1,5 @@
 import { ArrowLeft, Target, Workflow, Layers, Gauge, Users, Gem } from "lucide-react";
+import Link from "next/link";
 
 export const metadata = {
     title: "Principles | Your SEO title",
@@ -11,10 +12,10 @@ export default function PrinciplesPage() {
             <section className="relative glow grain">
                 <div className="absolute -top-32 -left-40 h-[36rem] w-[36rem] rotate-[10deg] bg-[conic-gradient(at_30%_30%,_#1e90ff_0deg,_#6d28d9_90deg,_#0ea5e9_180deg,_#f59e0b_270deg,_#1e90ff_360deg)] opacity-30 blur-3xl mix-blend-screen pointer-events-none" />
                 <div className="mx-auto max-w-6xl px-6 pt-24 pb-10">
-                    <a href="/" className="inline-flex items-center gap-2 text-zinc-300 hover:text-white">
+                    <Link href="/" className="inline-flex items-center gap-2 text-zinc-300 hover:text-white">
                         <ArrowLeft className="size-4" />
                         <span>Back</span>
-                    </a>
+                    </Link>
                     <h1 className="display-font text-4xl sm:text-5xl mt-6 leading-[1.07]">
                         Principles for predictable SaaS growth
                     </h1>
@@ -83,9 +84,9 @@ export default function PrinciplesPage() {
                                 <a href="mailto:founder@yourdomain.com?subject=Principles%20to%20practice" className="inline-flex items-center justify-center gap-2 rounded-none bg-zinc-100 px-6 py-3 text-zinc-900 font-medium hover:bg-white/90 active:scale-[0.99] transition">
                                     <span>Book an intro</span>
                                 </a>
-                                <a href="/" className="inline-flex items-center justify-center gap-2 rounded-none border border-zinc-700/80 px-6 py-3 text-zinc-100 hover:bg-zinc-800/50 transition">
+                                <Link href="/" className="inline-flex items-center justify-center gap-2 rounded-none border border-zinc-700/80 px-6 py-3 text-zinc-100 hover:bg-zinc-800/50 transition">
                                     <span>Back to home</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="p-6 border border-zinc-800/80 bg-zinc-950/50">
