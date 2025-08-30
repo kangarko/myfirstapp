@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+:root {
+    --font-display: ui-sans-serif;
+    --font-body: ui-sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+}
+
+.display-font {
+    font-family: var(--font-display);
+}
+
+.glow {
+    position: relative;
+}
+
+.glow::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    background: radial-gradient(60% 60% at 50% 40%, rgba(56, 189, 248, 0.25), rgba(168, 85, 247, 0.12) 40%, rgba(0,0,0,0) 70%);
+    filter: blur(60px);
+    z-index: -1;
+}
+
+.grain {
+    position: relative;
+}
+
+.grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' opacity='0.08' viewBox='0 0 100 100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: soft-light;
+    pointer-events: none;
+}
